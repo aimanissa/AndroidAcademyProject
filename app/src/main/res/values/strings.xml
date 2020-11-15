@@ -5,4 +5,9 @@
     <string name="description_text">After the devastating events of Avengers: Infinity War, the universe is in ruins.
         With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos
         actions and restore balance to the universe.</string>
+    <string name="age_rating">13+</string>
+    <string name="genre_text_view">Action, Adveture, Fantasy</string>
+    <string name="reviews_text_view">125 REVIEWS</string>
+    <string name="storyline_text_view">Storyline</string>
+    <string name="cast_text_view">Cast</string>
 </resources>
