@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+    android:id="@+id/card_view_item"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,28 +13,32 @@
     app:cardCornerRadius="8dp">
 
     <ImageView
+        android:id="@+id/card_view_color_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/card_view_color_bg" />
 
     <ImageView
+        android:id="@+id/card_view_mask_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/card_view_background" />
+        android:background="@drawable/card_view_mask_bg" />
 
     <ImageView
+        android:id="@+id/card_preview_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/avengers_preview"
         android:scaleType="centerCrop" />
 
     <ImageView
+        android:id="@+id/card_view_shadow_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/card_view_shadow_mask" />
+        android:background="@drawable/card_view_shadow_bottom" />
 
     <TextView
-        android:id="@+id/age_limit_text_view"
+        android:id="@+id/card_age_limit_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -49,15 +54,16 @@
         android:textStyle="bold" />
 
     <ImageView
+        android:id="@+id/card_like_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="6dp"
-        android:background="@drawable/like_item" />
+        android:src="@drawable/like_item" />
 
     <TextView
-        android:id="@+id/genre_card_text_view"
+        android:id="@+id/card_genre_text_view"
         android:layout_width="146dp"
         android:layout_height="12dp"
         android:layout_marginStart="6dp"
@@ -69,7 +75,7 @@
         android:textSize="8sp" />
 
     <LinearLayout
-        android:id="@+id/reviews_layout"
+        android:id="@+id/card_reviews_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
@@ -78,6 +84,7 @@
         android:orientation="horizontal">
 
         <RatingBar
+            android:id="@+id/card_rating_bar"
             style="@style/Widget.AppCompat.RatingBar.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,6 +93,7 @@
             android:rating="4"/>
 
         <TextView
+            android:id="@+id/card_reviews"
             android:layout_width="53dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -96,6 +104,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/card_movie_title"
         android:layout_width="132dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
@@ -109,6 +118,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/card_duration_time"
         android:layout_width="154dp"
         android:layout_height="12dp"
         android:layout_marginStart="8dp"

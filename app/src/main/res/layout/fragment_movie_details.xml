@@ -214,6 +214,7 @@
             app:layout_constraintTop_toBottomOf="@id/cast_text_view" />
         
         <TextView
+            android:id="@+id/actor_1_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -227,6 +228,7 @@
             app:layout_constraintEnd_toEndOf="@+id/actor_1_image_view"/>
 
         <TextView
+            android:id="@+id/actor_2_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -240,6 +242,7 @@
             app:layout_constraintEnd_toEndOf="@+id/actor_2_image_view"/>
 
         <TextView
+            android:id="@+id/actor_3_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -253,6 +256,7 @@
             app:layout_constraintEnd_toEndOf="@+id/actor_3_image_view"/>
 
         <TextView
+            android:id="@+id/actor_4_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
