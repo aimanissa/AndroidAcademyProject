@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import java.util.zip.Inflater
 
-class FragmentMoviesDetails : Fragment() {
+class MovieDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_movies_details, container, false)
+        return inflater.inflate(R.layout.fragment_movie_details, container, false)
     }
 
 }
