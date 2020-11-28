@@ -31,19 +31,18 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/back_text_view"
+            android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginTop="44dp"
             android:layout_marginBottom="214dp"
             android:drawablePadding="14dp"
             android:gravity="center_vertical"
             android:paddingStart="18dp"
-            android:paddingEnd="315dp"
             android:text="@string/back_text_view"
             android:textColor="@color/theme_text_grey"
             app:drawableLeftCompat="@drawable/back_icon"
             app:layout_constraintBottom_toBottomOf="@id/film_image_view"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -85,6 +84,7 @@
             android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
             android:text="@string/genre_text_view"
+            android:textStyle="bold"
             android:textColor="@color/pink"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
