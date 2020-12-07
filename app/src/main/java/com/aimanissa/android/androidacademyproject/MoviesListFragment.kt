@@ -1,16 +1,24 @@
 package com.aimanissa.android.androidacademyproject
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.GridLayout
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.aimanissa.android.androidacademyproject.data.models.Movie
+import com.aimanissa.android.androidacademyproject.domain.ActorsDataSource
+import com.aimanissa.android.androidacademyproject.domain.MoviesDataSource
 
 class MoviesListFragment : Fragment() {
 
-    private var cardView: CardView? = null
-    private var listener: ListClickListener? = null
+    private var recyclerView: RecyclerView? = null
+    private val movies = listOf<Movie>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,16 +31,20 @@ class MoviesListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        cardView = view.findViewById<CardView>(R.id.card_view_item).apply {
-            setOnClickListener{ listener?.openDetailsFragment() }
+        recyclerView = view.findViewById(R.id.movies_recycler_view)
+        recyclerView?.layoutManager = GridLayoutManager(context, 2)
+        recyclerView?.adapter = MoviesAdapter(movies, requireContext())
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        updateData()
+    }
+
+    private fun updateData() {
+        (recyclerView?.adapter as? MoviesAdapter)?.apply {
+            bindMovies(MoviesDataSource().getMovies())
         }
-    }
-
-    fun setListListener(l: ListClickListener) {
-        listener = l
-    }
-
-    interface ListClickListener {
-        fun openDetailsFragment()
     }
 }

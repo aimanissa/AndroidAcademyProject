@@ -12,4 +12,5 @@
     <color name="text_white_color">#ECECEC</color>
     <color name="pink">#FF3466</color>
     <color name="text_film_duration_grey">#565665</color>
+    <color name="background_dark">#191926</color>
 </resources>

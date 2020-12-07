@@ -2,13 +2,15 @@ package com.aimanissa.android.androidacademyproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.FragmentManager
+import com.aimanissa.android.androidacademyproject.data.models.Movie
 
-class MainActivity : AppCompatActivity(),
-    MoviesListFragment.ListClickListener, MovieDetailsFragment.DetailsClickListener {
+class MainActivity : AppCompatActivity(), OnMovieItemClick,
+    MovieDetailsFragment.DetailsClickListener {
 
     private val listFragment =
-        MoviesListFragment().apply { setListListener(this@MainActivity) }
+        MoviesListFragment()
     private val detailsFragment =
         MovieDetailsFragment().apply { setDetailsListener(this@MainActivity) }
 
@@ -25,7 +27,7 @@ class MainActivity : AppCompatActivity(),
             }
     }
 
-    override fun openDetailsFragment() {
+    override fun openDetailsFragment(holder: View) {
         supportFragmentManager.beginTransaction()
             .apply {
                 setReorderingAllowed(true)
@@ -38,4 +40,6 @@ class MainActivity : AppCompatActivity(),
     override fun backToListFragment() {
         supportFragmentManager.popBackStack()
     }
+
+
 }
